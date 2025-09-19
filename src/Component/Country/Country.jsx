@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Country.css'
 
 
-const Country = ({country,handleVisitedCountries}) => {
+const Country = ({country,handleVisitedCountries,handleFlag}) => {
  
   const[visited,setVisited] = useState(false)
   const handleVisited=()=>{
@@ -22,6 +22,7 @@ handleVisitedCountries(country)
           <button  onClick={handleVisited}>
             {visited?'Visited':'Not Visited'}
           </button>
+          <button onClick={()=>{handleFlag(country.flags.flags.png)}}>Add to Card</button>
          
 
         </div>
